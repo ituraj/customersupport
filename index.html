@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Customer Support</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="container">
+    <header><h1>Customer Support Interface</h1></header>
+    <nav>
+        <ul>
+            <li><a href="#">All</a></li>
+            <li><a href="#primary">Primary</a></li>
+            <li><a href="#secondary">Secondary</a></li>
+            <li><a href="#minor">Minor</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="request-section"></section>
+            <template class="request-template">
+                <article>
+                <div class="importance-color"></div>
+                <h2 class="request-number"></h2>
+                <h3 class="request-name"></h3>
+                <h3 class="request-place"></h3>
+                <h3 class="request-date"></h3>
+                <p class="request-message"></p>
+                <p class="content"></p>
+                <button class="more">Read more</button>
+                <button class="completed">Submit</button>
+            </article>
+            </template>
+    </main>
+</div>
+    <script src="main.js"></script>
+</body>
+</html>

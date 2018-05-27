@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway');
+
+
+/* 
+--- Table of Contents ---
+- General
+- Typography
+- CSS Grid 
+- Header & Navigation
+- Main
+*/
+
+/* --- General --- */
+
+body, header, main {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f6f6f8;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+
+/* --- Typography --- */
+
+h1, h2, h3, p {
+    padding: 0 0.5em;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2em;
+}
+
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+
+
+/* --- CSS Grid --- */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-areas: 
+            "hd hd"
+            "nav main";
+
+}
+
+/* --- Header & Navigation --- */
+
+header {
+    grid-area: hd;
+    background-color: #2a2c30;
+    color: white;
+    padding: 0.5em 1em;
+    box-shadow: 3px 3px 10px -2px rgba(0,0,0,0.5);
+}
+
+nav {
+    grid-area: nav;
+    background-color: #fff;
+    box-shadow: 3px 3px 10px -2px rgba(0,0,0,0.5);
+}
+
+nav ul {
+    list-style: none;
+    position: fixed;
+}
+
+li {
+    margin: 2%;
+}
+
+li a {
+    color: #111;
+    text-decoration: none;
+}
+
+/* --- Main --- */
+
+main {
+    grid-area: main;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+article {
+    margin: 2%;
+    width: 25vw;
+    background-color: white;
+    position: relative;
+    border-radius: 3px;
+    box-shadow: 3px 3px 10px -2px rgba(0,0,0,0.5);
+}
+
+.importance-color {
+    padding: 1em;
+    color: #fff;
+}
+
+
+button {
+    border-radius: 2px;
+    border: 1px solid #d9d9d9;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.8em;
+}
+
+button:hover {
+    cursor: pointer;
+    border-bottom: 1.5px solid #111;
+}
+
+.more {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.completed {
+    position: absolute;
+    bottom: 0;
+    left: 85px;
+}
+
+.content {
+    padding-top: 5px;
+}
