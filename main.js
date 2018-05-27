@@ -28,15 +28,18 @@ function show(requests){
 
         // Show the importance
 
-        clone.querySelector('.importance-color').textContent=`Importance rate: ${request.importance}`;
+        clone.querySelector('.importance-color').textContent=``;
         if(request.importance<40){
+            clone.querySelector('.importance-color').textContent=`Minor Importance`;
             clone.querySelector('.importance-color').style.background = "linear-gradient(to right, #11998e, #38ef7d)";
             clone.querySelector('.importance-color').setAttribute("id", "minor");
         } else if (request.importance>70) {
+            clone.querySelector('.importance-color').textContent=`Primary Importance`;
             clone.querySelector('.importance-color').style.background = "linear-gradient(to left, #e52d27, #b31217)";
             clone.querySelector('.importance-color').setAttribute("id", "primary");
         } 
         else {
+            clone.querySelector('.importance-color').textContent=`Secondary Importance`;
             clone.querySelector('.importance-color').style.background ="linear-gradient(to left, #ffe259, #ffa751)";
             clone.querySelector('.importance-color').setAttribute("id", "secondary");
         };
